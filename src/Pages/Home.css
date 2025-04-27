@@ -1,0 +1,148 @@
+.homepage-container {
+  position: relative;
+  width: 100%;
+  height: 90vh;
+  background-color: #00000000;
+  overflow: hidden;
+}
+
+.background-image {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 90%;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.95;
+  filter: brightness(0.6);
+}
+
+.overlay-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  z-index: 2;
+  top: -100px;
+}
+
+.main-title {
+  font-size: 55vh !important;
+  font-weight: 800;
+  color: #fee81f; /* Tailwind's blue-500 */
+  letter-spacing: 0.1em;
+  line-height: 1;
+  font-family: "delirium NCV", sans-serif;
+}
+.title {
+  font-size: 8vh !important;
+  font-weight: 800;
+  color: #fff; /* Tailwind's blue-500 */
+  line-height: 1;
+  text-align: center;
+  position: relative;
+  top: 200px !important;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.title .enroll {
+  background-color: rgba(255, 255, 255, 0);
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 900;
+  border: #fee81f 3px solid;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  padding: 25px;
+  width: 250px;
+}
+.title .enroll:hover  {
+  background-color: #fee81f;
+  color: black;
+  padding: 10%;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 900;
+  border: #00000000 3px solid;
+  padding: 25px;
+  width: 250px !important;
+}
+.overlay-text {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0; /* Behind image */
+  top: -290px;
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 25vh !important;
+    top: 0px !important;
+  }
+  .overlay-text {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0; /* Behind image */
+    top: -400px;
+  }
+  .overlay-text .title {
+    font-size: 5vh !important;
+    top: 200px !important;
+  }
+  .overlay-text .enroll:hover {
+    background-color: #fee81f;
+    color: black;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 900;
+    border: #fee81f 3px solid;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    padding: 5%;
+    width: 150px !important;
+  }
+  .overlay-text .enroll {
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 900;
+    border: #fee81f 3px solid;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    padding: 5%;
+    width: 150px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-title {
+    font-size: 25vh;
+    font-size: 45vh;
+  }
+}
